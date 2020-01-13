@@ -1,0 +1,26 @@
+AXIOME→HEAD BODY ​FIN
+HEAD→MOTCLE_T​​ TEXT ​MOTCLE_A​​ TEXT
+TEXT→MOT​​ TEXT | epsilon
+BODY→P S1
+P→NOUV_PARA​​ TEXT P | epsilon
+S1→H1 P S2 S1 | epsilon
+H1→SECTION​​ TEXT
+S2→H2 P S2 | epsilon
+H2→SSECTION​​ TEXT
+
+
+
+        first                       follow
+AXIOME	TITRE	                    \$
+HEAD	TITRE	                    PARA, SECTION, END
+TEXT	MOT, €	                    AUTEUR, PARA, SECTION, S_SECTION, END
+BODY	PARA, SECTION,€	            END
+P	    PARA, €	                    PARA, SECTION, S_SECTION, END
+S1	    SECTION, €	                END
+H1	    SECTION	                    PARA, SECTION, S_SECTION
+S2	    S_SECTION,€	                END, SECTION  
+H2	    S_SECTION	                PARA, SECTION, S_SECTION
+
+
+
+  
