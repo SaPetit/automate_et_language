@@ -1,0 +1,43 @@
+(define (reverse L)
+(cond
+((null? L) '())
+((cons (fisrt L) (reverse (rest L))))
+))  
+
+
+(define (revers L)
+(cond
+((null? L) '())
+((cons (fisrt L) (revers (rest L))))
+))
+
+(reverse '(a b c))
+
+
+(define (list< L N)
+(cond
+ ((null? L) '())
+ ((>= (first L) N) (list< (rest L) N))
+ ((cons (first L) (list< (rest L) N)))
+))
+
+
+(define (list>= L N)
+(cond
+ ((null? L) '())
+ ((< (first L) N) (list>= (rest L) N))
+ ((cons (first L) (list>= (rest L) N)))
+))
+
+
+(list>= '(1 12 5 87 87 10 4) 10)
+
+
+
+
+(define (Pui P N)
+  (cond
+   ((= N 0) 1)
+   ((= 1 (% N 2)) (* P (Pui P (- N 1))))
+   ((* (Pui P (/ N 2)) (Pui P (/ N 2))))
+     ))

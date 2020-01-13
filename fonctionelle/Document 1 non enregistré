@@ -1,0 +1,48 @@
+(define (list< L N)
+(cond
+ ((null? L) '())
+ ((>= (first L) N) (list< (rest L) N))
+ ((cons (first L) (list< (rest L) N)))
+))
+
+
+(define (list>= L N)
+(cond
+ ((null? L) '())
+ ((< (first L) N) (list>= (rest L) N))
+ ((cons (first L) (list>= (rest L) N)))
+))
+
+
+*******************************************************************************************************************
+
+(define (QS L)
+(cond
+((null? L) '())
+((append
+  (QS (list< (rest L) (first L))) (list (first L)) (QS (list>= (rest L) (first L)))                                                                                                                                                                                                                      ))
+))
+
+
+**************************************************************************************************************************
+
+(define (filtre L M F)
+(cond
+((and (null? L) (null? M)) true)
+((null? L)
+            (if (= (first M) F) (filtre L (rest M) F) nil)
+)
+((null? M) 
+            (if (= (first L) F) (filtre (rest L) M F) nil)
+)
+((= (first L) F) (filtre (rest L) M F)) 
+((= (first M) F) (filtre L (rest M) F)) 
+((= (first L) (first M)) (filtre (rest L) (rest M) F) )
+(nil)
+))
+
+
+
+(filtre '() '( ) 'g)
+
+*********************************************************************************
