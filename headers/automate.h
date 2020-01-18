@@ -16,7 +16,7 @@
 FILE *source, //fichier d'entrÃ© 
  *target = NULL; // fichier de sortie
 char c;
-enum TokenType
+typedef enum TokenType
 {
     MOTCLE_T,
     MOTCLE_A,
@@ -25,7 +25,9 @@ enum TokenType
     NOUV_PARA,
     MOT,
     END
-}token;
+}TokenType;
+
+TokenType token;
 
 char tokenValue[50];
 
