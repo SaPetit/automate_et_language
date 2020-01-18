@@ -32,6 +32,7 @@
 int Scanner()
 {
     int k=0;
+    initTokenValue();
 
      //EtatInitial
     EtatInitial:
@@ -165,6 +166,7 @@ int Scanner()
                     c = fgetc(source);
                     if (c=='u' || c == 'U')
                     {
+                        c = fgetc(source);
                         if (c=='R' || c == 'r')
                         {
                             c = fgetc(source);
@@ -172,6 +174,7 @@ int Scanner()
                         }
                         else
                         {
+                            puts("le r de auteur manque");
                             goto Error;
                         }
                         
@@ -280,9 +283,9 @@ int Scanner()
     }
     if (isalnum(c))
     {
-        tokenValue[k] = c;
-        k++;
-        c = fgetc(source);
+        //tokenValue[k] = c;
+        //k++;
+        //c = fgetc(source);
         goto Mot1_PARA;
     }
     goto Error;
@@ -304,6 +307,7 @@ int Scanner()
     return 0;
      //MOT
     MOT:
+    tokenValue[k] = '\0';
     token = MOT;
     return 0;
      //Mot1_PARA

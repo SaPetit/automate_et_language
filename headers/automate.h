@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <stdbool.h>
-#include "struct.c"
+//#include "struct.c"
 #include <ctype.h>
 
 
@@ -32,14 +32,15 @@ char tokenValue[50];
 
 //Prototypes.
 int Scanner();
+void initTokenValue();
 
 
 //
 
 
-
+#include "./../fonctions/initTokenValue.c"
 #include "./../fonctions/scanner.c"
-// #include "./../fonctions/.c"
+
 // #include "./../fonctions/.c"
 // #include "./../fonctions/.c"
 // #include "./../fonctions/.c"

@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
 {
     // Ouvre le fichier test.txt en lecture seulement
     // (le fichier doit exister) :
-    source = fopen("test2.txt", "r");
+    source = fopen("./../test2.txt", "r");
 
     if (source == NULL)
     {
