@@ -1,11 +1,11 @@
-void Analyse_HEAD() //\MOTCLE_T​​ TEXT ​\MOTCLE_A​​ TEXT
-{
+int Analyse_HEAD() //\MOTCLE_T​​ TEXT ​\MOTCLE_A​​ TEXT
+{ //puts("j'entre dans head");
 
-    if (token == MOTCLE_T​​)
+    if (token == 0)
     { // le token nous fait rentrer ici donc on en prend un nouveau
         Scanner();
         Analyse_TEXT();
-        if (token == MOTCLE_A​​ )
+        if (token == 1)
         //Le token ici est  fournie comme un follow de TEXT
         {
             Scanner();
@@ -23,9 +23,9 @@ void Analyse_HEAD() //\MOTCLE_T​​ TEXT ​\MOTCLE_A​​ TEXT
         return -1;
     }
 
-    if (token == PARA ||token == SECTION ||token == END)
+    if (token == NOUV_PARA ||token == SECTION ||token == END)
     {
-        continue;
+        
     }
     else
     {

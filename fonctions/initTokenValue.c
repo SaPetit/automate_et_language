@@ -1,4 +1,4 @@
-void initTokenValue()
+int initTokenValue()
 {
     for (size_t i = 0; i < 50; i++)
     {

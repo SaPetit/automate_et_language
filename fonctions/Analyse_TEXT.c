@@ -1,5 +1,5 @@
-void Analyse_TEXT() //TEXT→MOT​​ TEXT | epsilon
-{
+int Analyse_TEXT() //TEXT→MOT​​ TEXT | epsilon
+{ //puts("j'entre dans text");
     if (token == MOT)
     
     {
@@ -7,22 +7,22 @@ void Analyse_TEXT() //TEXT→MOT​​ TEXT | epsilon
      
      
      
-     
+     //fputs(source, tokenValue);
      
         //Une fois tokenValue traité on prend un nouveau token.
         //On le renvoie dans Analyse_TEXT
         Scanner();
         Analyse_TEXT();
-    }
-    else if (token == AUTEUR //on test l'appartenance de token à
-    || token == PARA         //follow(TEXT)
+    }//on test l'appartenance de token à follow(TEXT)
+    else if (token == MOTCLE_A 
+    || token == NOUV_PARA         
     || token == SECTION 
     || token == SSECTION 
     || token == END)
     {
         //On se trouve dans les follow de text, on peut appliquer 
         // TEXT -> epsilon
-        continue;
+        
     }
     else 
     {
