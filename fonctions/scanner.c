@@ -60,7 +60,7 @@ int Scanner()
     {
         goto END;
     }
-    if (isalnum(c))
+    if (isalnum(c) || c == '.' || c == ',' || c == '\'' || c == ';' || c== '!' || c== '?' || c =='\\' || c=='/' || c == '-' || c== '#' || c == '&' || c == '%')
     {
         tokenValue[k] = c;
         k++;
@@ -84,7 +84,7 @@ int Scanner()
     {
        goto MOT;
     }
-    if (isalnum(c))
+    if (isalnum(c) || c == '.' || c == ',' || c == '\'' || c == ';' || c== '!' || c== '?' || c =='\\' || c=='/' || c == '-' || c== '#' || c == '&' || c == '%')
     {
         tokenValue[k] = c;
         k++;
@@ -118,7 +118,7 @@ int Scanner()
     {
         goto END;
     }
-    if (isalnum(c))
+    if (isalnum(c) || c == '.' || c == ',' || c == '\'' || c == ';' || c== '!' || c== '?' || c =='\\' || c=='/' || c == '-' || c== '#' || c == '&' || c == '%')
     {
         tokenValue[k] = c;
         k++;
@@ -142,7 +142,7 @@ int Scanner()
     {
         goto END;
     }
-    if (isalnum(c))
+    if (isalnum(c) || c == '.' || c == ',' || c == '\'' || c == ';' || c== '!' || c== '?' || c =='\\' || c=='/' || c == '-' || c== '#' || c == '&' || c == '%')
     {
         tokenValue[k] = c;
         k++;
@@ -281,7 +281,7 @@ int Scanner()
     {
         goto END;
     }
-    if (isalnum(c))
+    if (isalnum(c) || c == '.' || c == ',' || c == '\'' || c == ';' || c== '!' || c== '?' || c =='\\' || c=='/' || c == '-' || c== '#' || c == '&' || c == '%')
     {
         //tokenValue[k] = c;
         //k++;

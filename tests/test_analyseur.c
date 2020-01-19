@@ -16,15 +16,10 @@ int main(int argc, char const *argv[])
         printf("Impossible d'ouvrir le fichier source\n");
         return -1;
     }
-    c = fgetc(source); // lecture du caractere suivant du fichier source
-    while(c!=EOF) //&& i<50)
-    {
+    c = fgetc(source); // lecture du 1er caractere du fichier source
+  
 
-        Scanner();
-        i++;
-        printf("\n %d %s a%ca \n", token, tokenValue, c);
-
-    }
+    Analyse_axiome();
     if (source != NULL)
     {fclose(source); // fermeture du fichier source
     return 0;}

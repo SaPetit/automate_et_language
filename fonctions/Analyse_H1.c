@@ -1,5 +1,5 @@
-void Analyse_H1() //H1→SECTION​​ TEXT
-{
+int Analyse_H1() //H1→SECTION​​ TEXT
+{ //puts("j'entre dans h1");
     if (token == SECTION)
     // le token nous fait rentrer ici donc on en prend un nouveau
     {
