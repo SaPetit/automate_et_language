@@ -1,7 +1,4 @@
-
-
-
-Analyse_S1() //S1→H1 P S2 S1 | epsilon
+void Analyse_S1() //S1→H1 P S2 S1 | epsilon
 {
     if (token == SECTION//SECTION = first(h1))
     { // //S1→H1 P S2 S1
@@ -12,12 +9,13 @@ Analyse_S1() //S1→H1 P S2 S1 | epsilon
         Analyse_S1();
     }
     else if (token == END)//on test l'appartenance de token à
+    //follow(S1)
     {
-        continue; //P → epsilon
+        continue; //S1 → epsilon
     }
     else
     {
-        puts("erreur dans P");
+        puts("erreur dans S1");
         return -1;
     }
 }

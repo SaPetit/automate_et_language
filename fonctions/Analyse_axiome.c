@@ -1,7 +1,7 @@
 
 
 
-Analyse_axiome() //AXIOME→HEAD BODY ​\FIN
+void Analyse_axiome() //AXIOME→HEAD BODY ​\FIN
 {
     Scanner(); // recupération du 1er token
     
