@@ -3,8 +3,7 @@
 
 Analyse_axiome() //AXIOME→HEAD BODY ​\FIN
 {
-    Scanner(); // recupération du tokrn
-    
+    Scanner(); // recupération du 1er token
     
     //Une seule règle possible
     Analyse_head();

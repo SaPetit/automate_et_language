@@ -1,25 +1,22 @@
-
-
-
-axiome() //AXIOME→HEAD BODY ​\FIN
+Analyse_P() //P→NOUV_PARA​​ TEXT P | epsilon
 {
-    Scanner(); // recupération du tokrn
-    
-    
-    //Une seule règle possible
-    head();
-    body();
-
-    if (token == 6)
+    if (token == NOUV_PARA​​)
+    { // le token nous fait rentrer ici donc on en prend un nouveau
+        Scanner();
+        Analyse_TEXT();
+        Analyse_P();
+    }
+    else if ( //on test l'appartenance de token à
+    || token == PARA         //follow(P)
+    || token == SECTION 
+    || token == SSECTION 
+    || token == END)
     {
-        puts("succès, la grammaire est respecté");
-        return 0;
+        continue; //P → epsilon
     }
     else
     {
-        puts("pblm token final");
+        puts("erreur dans P");
+        return -1;
     }
-
-    puts("erreur dans axiome");
-
 }

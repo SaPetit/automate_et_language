@@ -1,18 +1,20 @@
-
-
-
-Analyse_HEAD() //\MOTCLE_T​​ TEXT ​\MOTCLE_A​​ TEXT
+void Analyse_HEAD() //\MOTCLE_T​​ TEXT ​\MOTCLE_A​​ TEXT
 {
 
     if (token == MOTCLE_T​​)
-    {
+    { // le token nous fait rentrer ici donc on en prend un nouveau
         Scanner();
         Analyse_TEXT();
-        Scanner();
         if (token == MOTCLE_A​​ )
+        //Le token ici est  fournie comme un follow de TEXT
         {
             Scanner();
             Analyse_TEXT();
+        }
+        else
+        {
+        puts("erreur Analyse_HEAD attend un MOTCLE_A​​");
+        return -1;
         }
     }
     else

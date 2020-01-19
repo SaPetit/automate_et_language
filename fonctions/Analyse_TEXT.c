@@ -1,7 +1,4 @@
-
-
-
-Analyse_TEXT() //TEXT→MOT​​ TEXT | epsilon
+void Analyse_TEXT() //TEXT→MOT​​ TEXT | epsilon
 {
     if (token == MOT)
     
@@ -17,17 +14,17 @@ Analyse_TEXT() //TEXT→MOT​​ TEXT | epsilon
         Scanner();
         Analyse_TEXT();
     }
-    else if (token == AUTEUR
-    || token == PARA 
+    else if (token == AUTEUR //on test l'appartenance de token à
+    || token == PARA         //follow(TEXT)
     || token == SECTION 
-    || token == S_SECTION 
+    || token == SSECTION 
     || token == END)
     {
         //On se trouve dans les follow de text, on peut appliquer 
         // TEXT -> epsilon
         continue;
     }
-    else
+    else 
     {
         puts("erreur dans TEXT");
         return -1;

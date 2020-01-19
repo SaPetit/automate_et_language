@@ -1,12 +1,8 @@
-
-
-
-axiome() //AXIOME→HEAD BODY ​\FIN
+void Analyse_S2() //AXIOME→HEAD BODY ​\FIN
 {
     Scanner(); // recupération du tokrn
     
-    
-    //Une seule règle possible
+    //Une seule règle possible AXIOME→HEAD BODY ​\FIN
     head();
     body();
 
