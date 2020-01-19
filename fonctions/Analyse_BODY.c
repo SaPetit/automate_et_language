@@ -1,5 +1,5 @@
-body()
+body() // BODY→P S1
 {
-    fpara();
-    fs1();
+    Analyse_P();
+    Analyse_S1();
 }

@@ -1,14 +1,14 @@
 
 
 
-axiome() //AXIOME→HEAD BODY ​\FIN
+Analyse_axiome() //AXIOME→HEAD BODY ​\FIN
 {
     Scanner(); // recupération du tokrn
     
     
     //Une seule règle possible
-    head();
-    body();
+    Analyse_head();
+    Analyse_body();
 
     if (token == END)
     {

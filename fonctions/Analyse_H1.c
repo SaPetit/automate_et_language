@@ -1,25 +1,18 @@
 
 
 
-axiome() //AXIOME→HEAD BODY ​\FIN
+Analyse_H1() //H1→SECTION​​ TEXT
 {
-    Scanner(); // recupération du tokrn
-    
-    
-    //Une seule règle possible
-    head();
-    body();
-
-    if (token == 6)
+    if (token == SECTION)
+    // le token nous fait rentrer ici donc on en prend un nouveau
     {
-        puts("succès, la grammaire est respecté");
-        return 0;
+        Scanner();
+        Analyse_TEXT();
     }
     else
     {
-        puts("pblm token final");
+        puts("erreur Analyse h1 ne peut recevoir qu'un token SECTION, ce nest pas le cas ici");
+        return -1;
     }
-
-    puts("erreur dans axiome");
 
 }

@@ -18,6 +18,7 @@ axiome() //AXIOME→HEAD BODY ​\FIN
     else
     {
         puts("pblm token final");
+        return
     }
 
     puts("erreur dans axiome");
