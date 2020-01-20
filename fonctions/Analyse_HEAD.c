@@ -1,15 +1,22 @@
 int Analyse_HEAD() //\MOTCLE_T​​ TEXT ​\MOTCLE_A​​ TEXT
 { //puts("j'entre dans head");
 
-    if (token == 0)
+    if (token == MOTCLE_T)
     { // le token nous fait rentrer ici donc on en prend un nouveau
+        fputs(ouvrirBaliseHead, target);
+        fputs(ouvrirBaliseTitre, target);
         Scanner();
         Analyse_TEXT();
-        if (token == 1)
+        fputs(fermerBaliseTitre, target);
+        if (token == MOTCLE_A)
         //Le token ici est  fournie comme un follow de TEXT
         {
+            fputs(ouvrirBaliseAuteur, target);
             Scanner();
             Analyse_TEXT();
+
+            fputs(fermerBaliseAuteur, target);
+            fputs(fermerBaliseHead, target);
         }
         else
         {

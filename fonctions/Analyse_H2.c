@@ -4,8 +4,10 @@ int Analyse_H2() //H2→SSECTION​​ TEXT
     if (token == SSECTION)
     // le token nous fait rentrer ici donc on en prend un nouveau
     {
+        fputs(ouvrirBaliseH2, target);
         Scanner();
         Analyse_TEXT();
+        fputs(fermerBaliseH2, target);
     }
     else
     {

@@ -2,9 +2,11 @@ int Analyse_H1() //H1→SECTION​​ TEXT
 { //puts("j'entre dans h1");
     if (token == SECTION)
     // le token nous fait rentrer ici donc on en prend un nouveau
-    {
+    {   fputs(ouvrirBaliseH1, target);
         Scanner();
         Analyse_TEXT();
+        fputs(fermerBaliseH1, target);
+
     }
     else
     {

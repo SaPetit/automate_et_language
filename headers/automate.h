@@ -30,21 +30,24 @@ TokenType token;
 
 char tokenValue[50];
 
-///////////////////
-	char ouvrirBaliseTitre[] = "<titre>";
-	char fermerBaliseTitre[] = "</titre>";
-	char ouvrirBaliseAuteur[] = "<auteur>";
-	char fermerBaliseAuteur[] = "</auteur>";
-    char ouvrirBaliseH1[] = "<h1>";
-	char fermerBaliseH1[] = "</h1>";
-    char ouvrirBaliseP[] = "<p>";
-	char fermerBaliseP[] = "</p>";
-    char ouvrirBaliseBody[] = "<body>";
-	char fermerBaliseBody[] = "</body>";
-    char ouvrirPage[] = "<html>";
-    char fermerPage[] = "</html>";
-	char ouvrirBaliseH2[] = "<h2>";
-	char fermerBaliseH2[] = "</h2>";
+/////////////////// 
+
+    char ouvrirBaliseHead[] = "\n<head>\n";
+	char fermerBaliseHead[] = "\n</head>\n";
+	char ouvrirBaliseTitre[] = "\n<title>\n";
+	char fermerBaliseTitre[] = "\n</title>\n";
+	char ouvrirBaliseAuteur[] = "\n<meta name=\"author\" content=\"";
+	char fermerBaliseAuteur[] = "\">\n";
+    char ouvrirBaliseH1[] = "\n<h1>\n";
+	char fermerBaliseH1[] = "\n</h1>\n";
+    char ouvrirBaliseP[] = "\n<p>\n";
+	char fermerBaliseP[] = "\n</p>\n";
+    char ouvrirBaliseBody[] = "\n<body>\n";
+	char fermerBaliseBody[] = "\n</body>\n";
+    char ouvrirPage[] = "\n<html>\n";
+    char fermerPage[] = "\n</html>\n";
+	char ouvrirBaliseH2[] = "\n<h2>\n";
+	char fermerBaliseH2[] = "\n</h2>\n";
 
 
 //Prototypes.
