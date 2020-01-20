@@ -3,6 +3,9 @@ int Analyse_H1() //H1→SECTION​​ TEXT
     if (token == SECTION)
     // le token nous fait rentrer ici donc on en prend un nouveau
     {   fputs(ouvrirBaliseH1, target);
+        compteurSection++;
+        compteurSSection = 0; // réinitialisation du compteur section.
+        fprintf(target, "%c) ", compteurSection); //impression du numéro de section
         Scanner();
         Analyse_TEXT();
         fputs(fermerBaliseH1, target);

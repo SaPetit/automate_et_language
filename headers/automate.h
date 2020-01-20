@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <stdbool.h>
-
+#include <stdint.h>
 #include <ctype.h>
 
 //Variables Globales et enum
@@ -24,6 +24,8 @@ FILE* source; //fichier d'entrée
 FILE* target = NULL; // fichier de sortie
 char c; // caractère en cours de lecture
 char tokenValue[50]; // mot en cours de lecture
+int compteurSection = 64;  //garde en mémoire le decompte des sections
+int compteurSSection = 0; //garde en mémoire le decompte des sous sections
 
 // Declaration des tableaux de caracteres a inserer dans le html
 char ouvrirBaliseHead[] = "\n<head>\n";
