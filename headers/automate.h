@@ -12,8 +12,8 @@
 
 //Variables Globales et enum
 
-FILE *source, //fichier d'entrÃ© 
- *target = NULL; // fichier de sortie
+FILE* source; //fichier d'entrÃ© 
+FILE* target = NULL; // fichier de sortie
 char c;
 typedef enum TokenType
 {
@@ -29,6 +29,22 @@ typedef enum TokenType
 TokenType token;
 
 char tokenValue[50];
+
+///////////////////
+	char ouvrirBaliseTitre[] = "<titre>";
+	char fermerBaliseTitre[] = "</titre>";
+	char ouvrirBaliseAuteur[] = "<auteur>";
+	char fermerBaliseAuteur[] = "</auteur>";
+    char ouvrirBaliseH1[] = "<h1>";
+	char fermerBaliseH1[] = "</h1>";
+    char ouvrirBaliseP[] = "<p>";
+	char fermerBaliseP[] = "</p>";
+    char ouvrirBaliseBody[] = "<body>";
+	char fermerBaliseBody[] = "</body>";
+    char ouvrirPage[] = "<html>";
+    char fermerPage[] = "</html>";
+	char ouvrirBaliseH2[] = "<h2>";
+	char fermerBaliseH2[] = "</h2>";
 
 
 //Prototypes.

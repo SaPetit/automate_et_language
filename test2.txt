@@ -1,11 +1,6 @@
 >Titre Mon premier exemple de fichier texte
 >Auteur Nicolas
 
-Ce fichier 
-
-
-
-Les 
 
 = Ma premiere section
 

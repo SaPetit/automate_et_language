@@ -7,7 +7,8 @@ int Analyse_TEXT() //TEXT→MOT​​ TEXT | epsilon
      
      
      
-     //fputs(source, tokenValue);
+            fputs(tokenValue, target);
+            fputc(' ', target);
      
         //Une fois tokenValue traité on prend un nouveau token.
         //On le renvoie dans Analyse_TEXT
